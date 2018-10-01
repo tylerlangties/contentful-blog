@@ -3,7 +3,6 @@ module.exports = {
     title: 'Posts',
     desc: 'A new Blog',
   },
-  pathPrefix: "/gatsby-blog",
   plugins: [
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-styled-components',
@@ -29,6 +28,7 @@ module.exports = {
     },
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
+    'gatsby-plugin-netlify-cms',
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -44,3 +44,5 @@ module.exports = {
     'gatsby-plugin-offline',
   ],
 }
+
+//pathPrefix: "/gatsby-blog",
