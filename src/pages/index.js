@@ -9,7 +9,7 @@ const IndexPage = ({data}) => (
   <Layout>
     
     <h2>{data.site.siteMetadata.title}</h2>
-    {data.allMarkdownRemark.edges.map(({node}) => {
+    {data.allContentfulBlogPost.edges.map(({node}) => {
       return <PostListing key={node.id} post={node} />
     })}
   </Layout>
@@ -18,31 +18,27 @@ const IndexPage = ({data}) => (
 export default IndexPage;
 
 export const query = graphql`
-query TestQuery{
+query SiteMeta{
   site{
     siteMetadata{
       title
       desc
     }
   }
-  allMarkdownRemark(sort: {
-    fields: [frontmatter___date],
-    order: DESC
-  }) {
-    edges{
-      node{
+  allContentfulBlogPost {
+    edges {
+      node {
+        slug
         id
-        frontmatter{
-          title
-          date
+        title
+        createdAt(formatString: "MMMM DD, YYYY")
+        body {
+          childMarkdownRemark {
+            excerpt
+          }
         }
-        fields {
-          slug
-        }
-        html
-        excerpt
       }
     }
   }
-}
+} 
 `;
