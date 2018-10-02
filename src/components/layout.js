@@ -5,6 +5,7 @@ import { StaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image'
 
 import Header from './header'
+import Footer from './footer'
 import './layout.css'
 
 const Layout = ({ children, location }) => (
@@ -16,7 +17,7 @@ const Layout = ({ children, location }) => (
             title
           }
         }
-        background: file(relativePath: { regex: "/moon.jpeg/" }) {
+        background: file(relativePath: { regex: "/atmos.jpeg/" }) {
           childImageSharp {
             fluid(maxWidth: 700) {
               ...GatsbyImageSharpFluid_noBase64
@@ -50,6 +51,7 @@ const Layout = ({ children, location }) => (
         >
           {children}
         </div>
+        <Footer/>
       </>
     )}
   />
