@@ -6,6 +6,7 @@ export default class PostPage extends Component {
 
    render() {
       const { data } = this.props;
+      if (!data) return null;
       return (
          <Layout>
             <span>{data.markdownRemark.frontmatter.date}</span>
