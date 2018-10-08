@@ -8,7 +8,6 @@ export default class PostPage extends Component {
       const { data } = this.props;
       if (!data) return null;
       return (
-        <PageTransition>
         <Layout>
           <span>{data.contentfulBlogPost.date}</span>
           <h1>{data.contentfulBlogPost.title}</h1>
@@ -16,7 +15,6 @@ export default class PostPage extends Component {
             __html: data.contentfulBlogPost.body.childMarkdownRemark.html
           }}/>
         </Layout>
-        </PageTransition>
       );
   }
 }

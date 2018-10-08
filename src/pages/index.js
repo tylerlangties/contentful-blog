@@ -4,7 +4,6 @@ import PageTransition from 'gatsby-plugin-page-transitions';
 import Layout from '../components/layout';
 
 const IndexPage = ({data}) => (
-  <PageTransition>
   <Layout>
     
     <h2>{data.site.siteMetadata.title}</h2>
@@ -12,7 +11,6 @@ const IndexPage = ({data}) => (
       return <PostListing key={node.id} post={node} />
     })}
   </Layout>
-  </PageTransition>
 );
 
 export default IndexPage;

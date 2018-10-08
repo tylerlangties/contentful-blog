@@ -37,7 +37,6 @@ module.exports = {
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
     'gatsby-transformer-remark',
-    'gatsby-plugin-page-transitions',
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
