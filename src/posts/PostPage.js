@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Layout from '../components/layout';
-import ReactDOM from 'react-dom';
+import PageTransition from 'gatsby-plugin-page-transitions';
 
 export default class PostPage extends Component {
 
@@ -8,6 +8,7 @@ export default class PostPage extends Component {
       const { data } = this.props;
       if (!data) return null;
       return (
+        <PageTransition>
         <Layout>
           <span>{data.contentfulBlogPost.date}</span>
           <h1>{data.contentfulBlogPost.title}</h1>
@@ -15,6 +16,7 @@ export default class PostPage extends Component {
             __html: data.contentfulBlogPost.body.childMarkdownRemark.html
           }}/>
         </Layout>
+        </PageTransition>
       );
   }
 }

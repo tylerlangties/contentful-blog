@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import { Link } from 'gatsby'
 import logo from '../images/diamond.svg';
 import styled from 'styled-components';
-import ReactDOM from 'react-dom';
 import Img from 'gatsby-image';
 
 const HeaderWrapper = styled.div`
@@ -13,7 +12,7 @@ const HeaderWrapper = styled.div`
   height: 40vh;
   h1 {
     img {
-      height: 100px;
+      height: 75px;
     }
   }
 `;

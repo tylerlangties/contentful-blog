@@ -2,7 +2,6 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
-import Img from 'gatsby-image'
 
 import Header from './header'
 import Footer from './footer'
@@ -17,7 +16,7 @@ const Layout = ({ children, location }) => (
             title
           }
         }
-        background: file(relativePath: { regex: "/atmos.jpeg/" }) {
+        background: file(relativePath: { regex: "/pencils.jpg/" }) {
           childImageSharp {
             fluid(maxWidth: 700) {
               ...GatsbyImageSharpFluid_noBase64

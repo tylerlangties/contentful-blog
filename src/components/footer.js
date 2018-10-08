@@ -1,4 +1,5 @@
-import React, { Component } from 'react';
+import React from 'react';
+import { SocialIcon } from 'react-social-icons';
 import styled from 'styled-components';
 
 const FooterWrapper = styled.div`
@@ -6,10 +7,11 @@ background: #524763;
 display: flex;
 justify-content: center;
 align-items: center;
-height: 15vh;
+flex-direction: column;
+height: 25vh;
 margin: 0;
 ul {
-   justify-content: space-around;
+   justify-content: center;
    align-items: center;
    height: 100%;
    max-width: 960px;
@@ -20,6 +22,7 @@ ul {
    list-style: none;
    li {
       color: white;
+      margin: 20px;
    }
 }
 `;
@@ -28,15 +31,18 @@ const Footer = () => (
    <FooterWrapper>
       <ul>
          <li>
-            <p>Footer</p>
+         <SocialIcon url="#" color="white" />
          </li>
          <li>
-         <p>Footer</p>
+         <SocialIcon url="#" color="white" network="tumblr" />
          </li>
          <li>
-         <p>Footer</p>
+         <SocialIcon network="twitter" color="white" url="#" />
          </li>
       </ul>
+      <div>
+         <p>&copy; Copyright 2018 Your Name | Created with Gatsby and Contentful</p>
+      </div>
    </FooterWrapper>
 )
 
