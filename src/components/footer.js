@@ -10,6 +10,13 @@ align-items: center;
 flex-direction: column;
 height: 25vh;
 margin: 0;
+div {
+   text-align: center;
+   p {
+      max-width: 960px;
+      font-size: .75rem;
+   }
+}
 ul {
    justify-content: center;
    align-items: center;
@@ -23,6 +30,10 @@ ul {
    li {
       color: white;
       margin: 20px;
+      &:hover {
+         background: #0084b4;
+         border-radius: 50px;
+      }
    }
 }
 `;
@@ -40,7 +51,7 @@ const Footer = () => (
          <SocialIcon network="twitter" color="white" url="#" />
          </li>
       </ul>
-      <div>
+      <div className="footer__content">
          <p>&copy; Copyright 2018 Your Name | Created with Gatsby and Contentful</p>
       </div>
    </FooterWrapper>
